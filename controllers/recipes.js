@@ -1,5 +1,8 @@
+import pool from '../db/pg.js';
+
 export const getAllRecipes = async (req, res) => {
-  res.send('Recipes');
+  const { rows } = await pool.query('SELECT NOW();');
+  res.send(rows);
 };
 
 export const getSingleRecipe = async (req, res) => {

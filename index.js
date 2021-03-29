@@ -1,6 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
-import colors from 'colors';
+import 'dotenv/config.js';
+import 'colors';
 import recipes from './routes/recipes.js';
 
 const app = express();
